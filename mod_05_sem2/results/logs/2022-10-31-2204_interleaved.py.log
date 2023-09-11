@@ -1,0 +1,12 @@
+Running interleaved.py on 2022-10-31 22:04:34.421761
+
+**** Summary of arguments ****
+Mate1 file: top24_Aip02.R1.fastq
+Mate2 file: top24_Aip02.R2.fastq
+Output file: top24_Aip02.interleave
+
+
+Preparing input data - 2022-10-31 22:04:34.421761
+Calling interleave() to process the data - 2022-10-31 22:04:34.421761
+Outputting results to file - 2022-10-31 22:04:34.453030
+Script has finished at 2022-10-31 22:04:34.453030

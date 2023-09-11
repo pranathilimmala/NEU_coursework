@@ -1,0 +1,18 @@
+Starting our analysis Sun Nov 20 10:03:55 EST 2022
+Loading our BINF6308 Anaconda environment, which includes Trinity.
+Loading samtools.
+Make directory for data files
+Moving trimmed FASTQ data to the working directory
+Moving alignment files to working directory
+Make directory for log files
+Starting Guided Assembly Sun Nov 20 10:04:01 EST 2022
+Merge all BAM alignment files Sun Nov 20 10:04:01 EST 2022
+Assemble the Guided Transcriptome Sun Nov 20 10:04:01 EST 2022
+Analyze the Guided Transcriptome Sun Nov 20 10:04:02 EST 2022
+Guided Assembly complete Sun Nov 20 10:04:02 EST 2022
+Starting De Novo Assembly Sun Nov 20 10:04:02 EST 2022
+Assemble the De Novo Transcriptome Sun Nov 20 10:04:02 EST 2022
+Analyze the De Novo Transcriptome Sun Nov 20 15:29:05 EST 2022
+De Novo Assembly complete Sun Nov 20 15:29:09 EST 2022
+Moving key files back to /home
+Assemblies complete Sun Nov 20 15:45:08 EST 2022

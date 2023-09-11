@@ -1,0 +1,363 @@
+---
+title: "MethodsVariantCalling.Rmd"
+author: "Pranathi Limmala"
+output: html_document
+date: "`r Sys.Date()`"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview:
+
+The assignment is about the DeepVariant program, described in the paper
+[@bolger] employs a specific process that involves using two software
+tools, Trimmomatic and bwa-mem [@Li]. Trimmomatic is used for quality
+trimming, which involves removing low-quality reads from the sequencing
+data. bwa-mem is used for alignment, which involves mapping the
+sequencing reads to a reference genome. To detect germline variations, a
+common approach is to compare the Next-Generation Sequencing (NGS) reads
+obtained from an individual with the reference genome of the species.
+This is done by aligning the NGS reads and generating a bam alignment
+file. The alignments are then analyzed using specialized software such
+as the Genome Analysis Tool Kit (GATK) [@McKenna] or DeepVariant
+[@Poplin], which can detect and characterize genetic variants. The
+results are usually saved in a format known as Variant Call Format (VCF)
+file.
+
+## Scripts:
+
+### (1) getGenome.sh
+
+1)  The "getGenome.sh" Bash script uses the wget function to get the
+    GRCh38 reference genome from the European Bioinformatics Institute.
+
+2)  The gzip-compressed file that was downloaded has a lengthy filename,
+    therefore using wget's -O option, it was renamed to "GRCh38
+    reference.fa.gz."
+
+3)The script creates log files called "getGenome.log" and
+"getGenome.err" for the standard output and standard error streams,
+respectively.
+
+4)  The command is then executed in the background using the & symbol,
+    enabling the script to carry on while the download is finished.
+
+5)  The script's main purpose is to download the GRCh38 reference genome
+    and to record any mistakes or download progress.
+
+### (2) getReads.sh
+
+1)The "getReads.sh" Bash script uses the fastq-dump tool to extract
+Next-Generation Sequencing (NGS) reads from the NA12878 reference
+sample.
+
+2)  In the code, the lines "fastq-dump --split-files SRR6808334
+    1\>getReads.log 2\>getReads.err &" runs the fastq-dump tool, which
+    is used to get sequencing reads from a distant database, in this
+    example, the NA12878 reference sample.
+
+3)  The ---split-files option specifies that forward and backward reads
+    should be divided up into distinct files.
+
+4)  The standard output and standard error streams are sent,
+    respectively, to the files named "getReads.log" and "getReads.err,"
+    by the output redirections 1\>getReads.log and 2\>getReads.err.
+
+5)  The command is put in the background by the & at the end of the
+    line, allowing the script to run additional commands without having
+    to wait for fastq-dump to complete.
+
+6)  Overall, this script may be used to extract NGS reads from the
+    NA12878 reference sample and save them to distinct files for further
+    use in analysis.
+
+### (3) trimReads.sh
+
+1)  The Trimmomatic tool, a well-liked program for trimming reads from
+    Illumina sequencing equipment, is launched via the Bash script
+    "trimReads.sh," which is titled in this case.
+
+2)  The script begins with the shebang *#!/usr/bin/env bash,* indicating
+    that the Bash shell should be used to execute the script.
+
+3)  The "nice -n 19" command lowers the process priority to make it less
+    likely to obstruct other active processes.
+
+4)  The next line executes the Trimmomatic software with the following
+    options and arguments:
+
+*java -jar /usr/local/programs/Trimmomatic-0.36/trimmomatic-0.36.jar*
+specifies that the Java Virtual Machine should run the Trimmomatic
+program. The path to the Trimmomatic JAR file is given.
+
+"PE" specifies that the input files contain paired-end reads.
+
+"-threads 1" specifies the number of threads to use for computation.
+
+"-phred33" specifies the quality encoding used in the input FASTQ files.
+
+"SRR6808334_1.fastq" and "SRR6808334_2.fastq" are the input paired-end
+FASTQ files.
+
+"SRR6808334_1.paired.fastq" and "SRR6808334_2.paired.fastq" are the
+output paired-end FASTQ files containing reads that were trimmed and
+still paired.
+
+"SRR6808334_1.unpaired.fastq" and "SRR6808334_2.unpaired.fastq" are the
+output FASTQ files containing reads that were trimmed but could not be
+paired.
+
+"HEADCROP:0" specifies the number of bases to remove from the start of
+each read.
+
+"ILLUMINACLIP:/usr/local/programs/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10"
+specifies the adapter sequences to remove from the reads. The adapter
+file and adapter trimming options are given.
+
+"LEADING:20" specifies the minimum quality required to keep a base from
+the start of each read.
+
+"TRAILING:20" specifies the minimum quality required to keep a base from
+the end of each read.
+
+"SLIDINGWINDOW:4:30" specifies the window size and required quality for
+sliding window trimming.
+
+"MINLEN:36" specifies the minimum length of a read to keep.
+
+"1\>trimReads.log" redirects the standard output to a log file named
+"trimReads.log".
+
+"2\>trimReads.err" redirects the standard error to an error log file
+named "trimReads.err".
+
+"&" runs the command in the background, allowing the user to continue
+using the terminal while the command is running.
+
+### (4) indexGenome.sh
+
+1)  This is a Bash script named "indexGenome.sh" that runs the BWA
+    software to create an index of a reference genome in FASTA format.
+
+2)  The script starts with a shebang "#!/usr/bin/env bash" which
+    indicates that the script should be run with the Bash shell.
+
+3)  The next line runs the "bwa index" command with the following
+    options and arguments: "-a bwtsw" specifies the algorithm used for
+    index construction, which in this case is the Burrows-Wheeler
+    Transform with the suffix array.
+
+"GRCh38_reference.fa" is the input reference genome file in FASTA
+format.
+
+"1\>indexGenome.log" redirects the standard output to a log file named
+"indexGenome.log".
+
+"2\>indexGenome.err" redirects the standard error to an error log file
+named "indexGenome.err".
+
+"&" runs the command in the background, allowing the user to continue
+using the terminal while the command is running.
+
+4)  Overall, this script generates an index of the reference genome
+    using BWA and logs the output and error messages to separate log
+    files. The generated index can be used in downstream analysis such
+    as alignment of sequencing reads to the reference genome.
+
+### (5) alignReads.sh
+
+1)  This is a Bash script named "alignReads.sh" that aligns paired-end
+    reads to a reference genome using the BWA software.
+
+2)  The script starts with a shebang "#!/usr/bin/env bash" which
+    indicates that the script should be run with the Bash shell.
+
+3)  The next line runs the "bwa mem" command with the following options
+    and arguments: "-t 8" specifies the number of threads to use for
+    computation.
+
+*-R "@RG*\tID:SRR6808334\tSM:bar" adds a read group header line to the
+output SAM file. This is useful for downstream analysis and is commonly
+included in alignment pipelines. The read group ID and sample name are
+specified as "SRR6808334" and "bar", respectively.
+
+"-p" specifies that the input reads are paired-end reads.
+
+"GRCh38_reference.fa" is the input reference genome file in FASTA
+format.
+
+"SRR6808334_1.fastq" and "SRR6808334_2.fastq" are the input paired-end
+FASTQ files containing reads to be aligned.
+
+"1\>SRR6808334.sam" redirects the standard output to a SAM file named
+"SRR6808334.sam".
+
+"2\>alignReads.err" redirects the standard error to an error log file
+named "alignReads.err".
+
+"&" runs the command in the background, allowing the user to continue
+using the terminal while the command is running.
+
+4)  Overall, this script aligns paired-end reads to the reference genome
+    using BWA and generates a SAM file containing the alignment
+    information. The SAM file can be further processed and converted to
+    other formats such as BAM using tools like SAMtools.
+
+### (6)sort.sh
+
+1)  This is a Bash script that runs the samtools sort command with
+    certain parameters and redirects the standard output and error
+    streams to separate log files.
+
+2)  \*samtools sort -\@ 8 -m 4G SRR6808334.sam -o SRR6808334.bam \* this
+    line in the code, runs the samtools sort command with the following
+    options: -\@ 8: Use 8 CPU threads for sorting. -m 4G: Use up to 4
+    gigabytes of memory for sorting. SRR6808334.sam: Input file to be
+    sorted. -o SRR6808334.bam: Write sorted output to this file.
+
+3)  *1\>sort.log 2\>sort.err &* this line in the code, redirects the
+    standard output (file descriptor 1) to a file named sort.log and
+    redirects the standard error (file descriptor 2) to a file named
+    sort.err.
+
+4)  The "&" at the end runs the command in the background, allowing the
+    script to continue executing while the samtools sort command runs
+    asynchronously.
+
+5)  Overall, this script is used to sort a SAM file using the "samtools
+    sort" command and redirect the output and error streams to separate
+    log files.
+
+### (7) indexReads.sh
+
+1)  This is a Bash script that uses the samtools tool to create an index
+    for a BAM file.
+
+2)  *samtools index -b SRR6808334.bam:* This command runs the samtools
+    index command with the -b option, which tells it to create a BAM
+    index, and specifies the input BAM file SRR6808334.bam to create the
+    index for.
+
+1\>index.log: This redirects the standard output of the samtools index
+command to a file called index.log.
+
+2\>index.err: This redirects the standard error of the samtools index
+command to a file called index.err.
+
+&: This puts the samtools index command in the background, allowing the
+script to continue executing without waiting for it to complete. This is
+useful if you have other commands you want to run in parallel with this
+one.
+
+So overall, this script creates a BAM index file for the input BAM file
+SRR6808334.bam, redirects the standard output and error to log files,
+and runs the command in the background.
+
+### (8) runDeepVariant.sh
+
+1)  This is a Bash script that runs DeepVariant, a tool for variant
+    calling from next-generation sequencing data.
+
+*set -euo pipefail:* This sets some Bash options that make the script
+safer and more robust. The -e option causes the script to exit
+immediately if any command fails, the -u option causes the script to
+exit if it encounters any undefined variables, and the -o pipefail
+option causes the script to exit if any command in a pipeline fails.
+
+BASE="/mnt/disks/sdb/binf6309-julianstanley/VariantCalling": This sets
+the base directory for the input and output files.
+
+BIN_VERSION="0.8.0": This sets the version of DeepVariant to use.
+
+INPUT_DIR="\${BASE}/input/data": This sets the input directory for the
+script.
+
+REF="GRCh38_reference.fa.gz": This sets the name of the reference genome
+file.
+
+BAM="SRR6808334.bam.sorted": This sets the name of the input BAM file.
+
+N_SHARDS="64": This sets the number of shards to use for the DeepVariant
+analysis.
+
+OUTPUT_DIR="\${BASE}/output": This sets the output directory for the
+script.
+
+OUTPUT_VCF="SRR6808334.output.vcf.gz": This sets the name of the output
+VCF file.
+
+OUTPUT_GVCF="SRR6808334.output.vcf.gz": This sets the name of the output
+GVCF file.
+
+LOG_DIR="\${OUTPUT_DIR}/logs": This sets the directory for log files.
+
+mkdir -p "\${OUTPUT_DIR}": This creates the output directory.
+
+mkdir -p "\${INPUT_DIR}": This creates the input directory.
+
+mkdir -p "\${LOG_DIR}": This creates the log directory.
+
+sudo apt-get -qq -y update: This updates the package list.
+
+if ! hash docker 2\>/dev/null; then: This checks if Docker is installed.
+
+echo "'docker' was not found in PATH. Installing docker...": This prints
+a message if Docker is not installed.
+
+sudo apt-get -qq -y install ...: This installs Docker.
+
+cp ...: This copies the input files to the input directory.
+
+sudo docker pull ...: This pulls the DeepVariant Docker image.
+
+sudo docker run ...: This runs DeepVariant in a Docker container, with
+the input and output directories mounted as volumes.
+
+/opt/deepvariant/bin/run_deepvariant: This is the command to run
+DeepVariant.
+
+--model_type=WGS: This sets the model type to Whole Genome Sequencing.
+
+--ref="/input/\${REF}": This specifies the path to the reference genome
+file.
+
+--reads="/input/\${BAM}": This specifies the path to the input BAM file.
+
+--output_vcf=/output/\${OUTPUT_VCF}: This specifies the path to the
+output VCF file.
+
+--output_gvcf=/output/\${OUTPUT_GVCF}: This specifies the path to the
+output GVCF file.
+
+--num_shards=\${N_SHARDS}: This specifies the number of shards to use.
+
+echo "Done.": This prints a message when the script is done.
+
+Overall, this script sets up the necessary directories and files,
+installs Docker and pulls the DeepVariant image, and runs DeepVariant
+with the specified input and output files.
+
+# References
+
+Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014. "Trimmomatic: A
+Flexible Trimmer for Illumina Sequence Data." *Bioinformatics* 30 (15):
+2114--20..
+
+Li, Heng, and Richard Durbin. 2009. "Fast and Accurate Short Read
+Alignment with Burrows-Wheeler Transform." *Bioinformatics* 25 (14):
+1754--60..
+
+McKenna, Aaron, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian
+Cibulskis, Andrew Kernytsky, Kiran Garimella, et al. 2010. "The Genome
+Analysis Toolkit: A MapReduce Framework for Analyzing Next-Generation
+DNA Sequencing Data." *Genome Res* 20 (9): 1297--1303..
+
+Poplin, Ryan, Pi-Chuan Chang, David Alexander, Scott Schwartz, Thomas
+Colthurst, Alexander Ku, Dan Newburger, et al. 2018. "A Universal SNP
+and Small-Indel Variant Caller Using Deep Neural Networks." *Nature
+Biotechnology* 36 (September): 983..

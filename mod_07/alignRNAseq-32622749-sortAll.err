@@ -1,0 +1,50 @@
+[E::hts_open_format] Failed to open file "results/Aip02.sam" : No such file or directory
+samtools sort: can't open "results/Aip02.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip05.sam" : No such file or directory
+samtools sort: can't open "results/Aip05.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip06.sam" : No such file or directory
+samtools sort: can't open "results/Aip06.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip12.sam" : No such file or directory
+samtools sort: can't open "results/Aip12.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip13.sam" : No such file or directory
+samtools sort: can't open "results/Aip13.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip14.sam" : No such file or directory
+samtools sort: can't open "results/Aip14.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip15.sam" : No such file or directory
+samtools sort: can't open "results/Aip15.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip17.sam" : No such file or directory
+samtools sort: can't open "results/Aip17.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip18.sam" : No such file or directory
+samtools sort: can't open "results/Aip18.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip19.sam" : No such file or directory
+samtools sort: can't open "results/Aip19.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip20.sam" : No such file or directory
+samtools sort: can't open "results/Aip20.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip21.sam" : No such file or directory
+samtools sort: can't open "results/Aip21.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip23.sam" : No such file or directory
+samtools sort: can't open "results/Aip23.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip24.sam" : No such file or directory
+samtools sort: can't open "results/Aip24.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip25.sam" : No such file or directory
+samtools sort: can't open "results/Aip25.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip26.sam" : No such file or directory
+samtools sort: can't open "results/Aip26.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip28.sam" : No such file or directory
+samtools sort: can't open "results/Aip28.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip29.sam" : No such file or directory
+samtools sort: can't open "results/Aip29.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip30.sam" : No such file or directory
+samtools sort: can't open "results/Aip30.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip32.sam" : No such file or directory
+samtools sort: can't open "results/Aip32.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip33.sam" : No such file or directory
+samtools sort: can't open "results/Aip33.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip34.sam" : No such file or directory
+samtools sort: can't open "results/Aip34.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip35.sam" : No such file or directory
+samtools sort: can't open "results/Aip35.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Aip36.sam" : No such file or directory
+samtools sort: can't open "results/Aip36.sam": No such file or directory
+[E::hts_open_format] Failed to open file "results/Unk.sam" : No such file or directory
+samtools sort: can't open "results/Unk.sam": No such file or directory
