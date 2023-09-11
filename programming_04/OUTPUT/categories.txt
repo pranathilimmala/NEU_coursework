@@ -1,0 +1,284 @@
+Category	:	Description
+1.1	:	21-glutamic acid-rich protein (21-garp)
+1.1	:	46 kd coxsackievirus and adenovirus receptor (car) protein
+1.1	:	acute myeloid leukemia 1 protein (oncogene aml-1), core-binding factor, alpha subunit
+1.1	:	autoimmune regulator (apeced protein)
+1.1	:	b-cell translocation gene
+1.1	:	beta-site app-cleaving enzyme 2, ec 3.4.23.
+1.1	:	brain specific polypeptide pep19
+1.1	:	c-terminal binding protein 2
+1.1	:	carbonyl reductase (nadph) 1, ec 1.1.1.184.
+1.1	:	carbonyl reductase (nadph) 3, ec 1.1.1.184.
+1.1	:	cell surface adhesion glycoprotein (lfa-1,cr3,p150,959 beta subunit precursor)
+1.1	:	cgmp-specific 3',5'-cyclic phosphodiesterase type 9, ec 3.1.4.17.
+1.1	:	chromosome 21 open reading frame 5
+1.1	:	chromosome 21 open reading frame 6
+1.1	:	cu,zn superoxide dismutase, ec 1.15.1.1.
+1.1	:	cystatin b (liver thiol proteinase inhibitor)
+1.1	:	disintegrin-like and metalloprotease with thrombospondin type 1 motif, 5
+1.1	:	down syndrome critical region protein a
+1.1	:	down syndrome critical region protein b
+1.1	:	dual-specificity tyrosine-y-phosphorylation regulated kinase, ec 2.7.1.
+1.1	:	gene of unknown function, spliced variant est ai126619
+1.1	:	glcnac-beta-1,3-galactosyltransferase 5
+1.1	:	h2b histone family s member
+1.1	:	heat shock transcription factor 2 binding protein
+1.1	:	holocarboxylase synthetase, ec 6.3.4.
+1.1	:	human alphaa-crystallin (crya1)
+1.1	:	human atp synthase oscp subunit, oligomycin sensitivity conferring protein
+1.1	:	human cardiac delayed rectifier potassium channel protein
+1.1	:	human chd2-52 down syndrome cell adhesion molecule
+1.1	:	human chromatin assembly factor-i p60 subunit
+1.1	:	human cldn17 gene for claudin-17
+1.1	:	human cldn8 gene for claudin-8
+1.1	:	human cystathionine-beta-synthase, ec 4.2.1.22.
+1.1	:	human down syndrome candidate region protein, proline-rich protein
+1.1	:	human down syndrome critical region protein c
+1.1	:	human dsrna adenosine deaminase drada2b, ec 3.5.
+1.1	:	human enterokinase; ec 3.4.21.9.
+1.1	:	human erythroblastosis virus oncogene homolog 2
+1.1	:	human formiminotransferase cyclodeaminase, ec 4.3.1.4.
+1.1	:	human g protein coupled inward rectifier potassium channel 2 (higirk2)
+1.1	:	human gc-rich sequence dna-binding factor candidate
+1.1	:	human glutamate receptor (glur5)
+1.1	:	human homeobox-containing protein
+1.1	:	human interferon alpha,beta receptor
+1.1	:	human interferon-alpha receptor (huifn-alpha-rec)
+1.1	:	human interferon-regulated resistance gtp-binding protein mxa
+1.1	:	human interferon-regulated resistance gtp-binding protein mxb
+1.1	:	human intersectin-sh3 domain-containing protein sh3p17
+1.1	:	human lanosterol synthase, ec 5.4.99.7.
+1.1	:	human liver-type 1-phosphofructokinase, ec 2.7.1.11.
+1.1	:	human metalloproteinase with thrombospondin type 1 motifs
+1.1	:	human microsomal stress 70 protein atpase core
+1.1	:	human mink-related peptide 1, potassium channel subunit, mirp1
+1.1	:	human mitochondrial atpase coupling factor 6 subunit
+1.1	:	human mrna for amyloid a4 precursor of alzheimer's disease
+1.1	:	human mrna for collagen vi alpha-1 c-terminal globular domain
+1.1	:	human mrna for collagen vi alpha-2 c-terminal globular domain
+1.1	:	human mrna for kiaa0136 protein
+1.1	:	human mrna for mcm3 import factor
+1.1	:	human mrna; transcriptional unit n143
+1.1	:	human nnp-1,nop52 (nnp-1), novel nuclear protein 1
+1.1	:	human non-histone chromosomal protein hmg-14
+1.1	:	human nuclear respiratory factor-2 subunit alpha
+1.1	:	human protein kinase c-binding protein rack17
+1.1	:	human pyridoxal kinase, ec 2.7.1.35.
+1.1	:	human quinone oxidoreductase homolog-1
+1.1	:	human reduced folate carrier (rfc)
+1.1	:	human ribosomal protein s5 mrna, complete cds
+1.1	:	human solute carrier family 5, member 3, sodium,myo-inositol cotransporter
+1.1	:	human t-lymphoma invasion and metastasis inducing tiam1 protein
+1.1	:	human transcription factor sim2, homolog of the drosophila single-minded gene sim1
+1.1	:	human transmembrane receptor protein; cytokine receptor
+1.1	:	human type xviii collagen
+1.1	:	human u2 snrnp auxiliary factor small subunit
+1.1	:	human ubiquitin conjugating enzyme g2
+1.1	:	human ubiquitin processing protease, ec 3.1.2.15.
+1.1	:	interferon-gamma receptor beta chain precursor
+1.1	:	inwardly rectifing potassium channel kir4.2.
+1.1	:	nadh-ubiquinone oxidoreductase 9 kd subunit precursor, ec 1.6.5.3.
+1.1	:	neural cell adhesion molecule 2 precursor
+1.1	:	nuclear factor rip140
+1.1	:	pericentrin, kendrin (kiaa0402)
+1.1	:	periodic tryptophan protein 2 homolog
+1.1	:	phosphoribosylglycinamide formyltransferase, ec 2.1.2.2.
+1.1	:	protein arginine n-methyltransferase 2, ec 2.1.1.
+1.1	:	putative serine threonin kinase, homolog to mouse mak5 af055919
+1.1	:	putative surface glycoprotein c21orf1 precursor
+1.1	:	s-100 calcium-binding protein, beta chain
+1.1	:	son dna-binding protein, kiaa1019
+1.1	:	synaptojanin-1, polyphosphoinositide phosphatase
+1.1	:	t-complex protein 1, theta subunit
+1.1	:	tetratricopeptide repeat protein 3 (tpr repeat protein d)
+1.1	:	transcription regulator protein
+1.1	:	transcriptional regulator erg (transforming protein erg)
+1.1	:	transient receptor potential-related channel 7, a novel putative ca2+ channel protein
+1.1	:	transmembrane protease, serine 2, ec 3.4.21.
+1.1	:	trefoil factor 2, sml1, human spasmolytic polypeptide (sp)
+1.1	:	trefoil factor 3, hitf, human intestinal trefoil factor
+1.1	:	trefoil factor, bce1, human ps2 induced by estrogen from human breast cancer cell line m
+1.1	:	ubiquitin specific protease usp25
+1.1	:	ubiquitin-like protein, a human homolog of the s. cerevisiae smt3 gene
+1.1	:	white protein homolog (atp-binding cassette transporter 8)
+1.2	:	chromosome 21 open reading frame 4 (interferon receptor cluster)
+1.2	:	complete cdna flj20451
+1.2	:	epilepsy holoprosencephaly candidate-1 protein
+1.2	:	gene homolog to camp response element binding and beta-tranducin family
+1.2	:	gene with homology to kiaa0790 protein
+1.2	:	human cdna clone 280692
+1.2	:	human cdna dkfzp586f0422, al050173
+1.2	:	human cldn14 gene
+1.2	:	human cytosine-5-methyltransferase 3-like protein
+1.2	:	human hes1 protein, homolog to e.coli and zebrafish es1 protein
+1.2	:	human homolog to mouse testis specific gene 2
+1.2	:	human mrna for kiaa0179 protein
+1.2	:	human mrna for kiaa0184 protein
+1.2	:	human mrna for kiaa0539 protein
+1.2	:	human mrna for kiaa0653 protein
+1.2	:	human mrna for kiaa0714 protein
+1.2	:	human mrna for kiaa0958 protein
+1.2	:	intronless long orf, al117578
+1.2	:	leucine rich protein c21-lrp
+1.2	:	nuclear encoded mitochondrial protein, cdna a2-yf5
+1.2	:	putative n6-dna-methyltransferase
+1.2	:	spliced est ak001660
+1.2	:	tryptophan-rich protein, congenital heart disease 5 protein
+1.2	:	wd repeat domain 4
+2.1	:	gene similar to 2-19 protein
+2.1	:	gene similar to glycerol-3-phosphate permease
+2.1	:	gene similar to marcks, cdna dkfzp564p1664
+2.1	:	gene similar to mouse junctional adhesion molecule, spliced est aa725566
+2.1	:	gene similar to plant lysophosphatidic acid acyltransferase
+2.1	:	gene similar to rat protein kinase (kid2)
+2.1	:	gene similar to tcp10, spliced ests aa465232,t18865
+2.1	:	gene similar to transmembrane serine protease
+2.1	:	gene similar to uba containing sh3 domain
+2.1	:	gene similar to uromodulin
+2.1	:	gene similar to zinc finger 5 protein
+2.1	:	poly (rc)-binding protein 3
+2.2	:	putative gene with similarity to zinc finger proteins
+3.1	:	hypothetical 76.5 kd protein, o95447, myosin heavy chain and kinesin homology
+3.1	:	putative gene containing c2 domain, spliced est aa490433
+3.1	:	putative gene containing transmembrane domain
+3.1	:	putative gene containing transmembrane domain
+3.1	:	putative gene, ankirin like, possible dual-specificity ser,thr,tyr kinase domain
+3.1	:	putative gene, immunoglobulin superfamily 5 like
+3.1	:	putative gene, lipase (ec 3.1.1.3) like
+3.1	:	putative gene, membrane protein like
+3.1	:	putative gene, multidrug resistance associated protein like
+3.1	:	putative gene, p64 chloride channel like, spliced ests t92523,t91760
+3.1	:	putative gene, proto-oncogene protein precursor like
+3.1	:	putative gene, rna binding motif protein 11 like
+3.1	:	putative gene, tgf-beta-activated kinase like
+3.2	:	putative gene with similarities to kiaa1074 and kiaa0565
+3.2	:	putative gene with similarities to yeast gene ydl038c
+3.2	:	putative gene, protein kinase c eta type (ec 2.7.1.) like
+3.2	:	putative gene, similar to c. elegans p91865, spliced est h51862
+4.1	:	spliced est aa262598
+4.1	:	spliced est aa306264
+4.1	:	spliced est aa442272
+4.1	:	spliced est aa451643
+4.1	:	spliced est aa658915
+4.1	:	spliced est aa843704
+4.1	:	spliced est ai188136
+4.1	:	spliced est ai369385
+4.1	:	spliced est ai702440
+4.1	:	spliced est ai761253
+4.1	:	spliced est aw242517
+4.1	:	spliced est n23422
+4.1	:	spliced est n45393
+4.1	:	spliced est t19019
+4.1	:	spliced ests z25278,aa825266
+4.2	:	spliced est aa017197
+4.2	:	spliced est aa412132
+4.2	:	spliced est aa435939
+4.2	:	spliced est aa934973
+4.2	:	spliced est aa969880
+4.2	:	spliced est ai016585
+4.2	:	spliced est ai492145
+4.2	:	spliced est ai685287
+4.2	:	spliced est ai796012
+4.2	:	spliced est aj003450
+4.2	:	spliced est aj003549,aj003550,aj003554
+4.2	:	spliced est aw138631
+4.2	:	spliced est aw138869
+4.2	:	spliced est h51284
+4.2	:	spliced est n47348
+4.2	:	spliced est r82144 (trapped exon)
+4.2	:	spliced est t74237
+4.2	:	spliced est w58369, nuclear factor
+4.2	:	spliced est w73844
+4.2	:	spliced ests aa233864,aa232809
+4.2	:	spliced partial mrna
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+4.3	:	exon prediction only
+5.0	:	60s ribosomal protein l10 pseudogene
+5.0	:	60s ribosomal protein l23 pseudogene
+5.0	:	60s ribosomal protein pseudogene
+5.0	:	adrenodoxin pseudogene
+5.0	:	alpha tubulin (tuba2) processed pseudogene
+5.0	:	calponin p pseudogene
+5.0	:	cyclophilin-related processed pseudogene
+5.0	:	cytochrome c pseudogene
+5.0	:	cytochrome c pseudogene
+5.0	:	cytochrome p450 pseudogene
+5.0	:	cytokeratin 18 processed pseudogene
+5.0	:	erk3 protein kinase pseudogene
+5.0	:	ets-like processed pseudogene
+5.0	:	eucaryotic initiation factor-3, subunit 5 pseudogene
+5.0	:	eukaryotic initiation factor 4ai pseudogene
+5.0	:	f1fo-atpase synthase f subunit pseudogene
+5.0	:	farnesyl pyrophosphate synthetase processed pseudogene
+5.0	:	glycerinaldehyde-3-phosphate dehydrogenase pseudogene
+5.0	:	heteronucleotide ribosomal protein pseudogene
+5.0	:	histone h2az pseudogene
+5.0	:	human chaperonin pseudogene
+5.0	:	human elongation factor ef-1-alpha processed pseudogene
+5.0	:	human glutathione peroxidase (gpxp2) pseudogene
+5.0	:	human ribosomal protein l37 pseudogene
+5.0	:	human ribosomal protein l37 pseudogene
+5.0	:	human splicing factor 2 hyaluronic acid-binding protein (sf2p32) pseudogene
+5.0	:	kiaa0253 pseudogene
+5.0	:	motorprotein pseudogene
+5.0	:	myosine alkali light chain 6 pseudogene
+5.0	:	neurofibromatosis type 1 pseudogene
+5.0	:	nonhistone chromosomal protein hmg-14 pseudogene
+5.0	:	pheromone receptor pseudogene
+5.0	:	pheromone receptor pseudogene
+5.0	:	proteasome 26s subunit pseudogene
+5.0	:	protein phosphatase inhibitor 2 pseudogene
+5.0	:	pseudogene for kiaa1238 protein, similar to bacterial ribosomal s6 modification protein
+5.0	:	pseudogene similar to btrc
+5.0	:	pseudogene similar to cdna dkfzp586e1423
+5.0	:	pseudogene similar to rna polymerase h subunits
+5.0	:	pseudogene with similarity to ribosomal protein l34
+5.0	:	pseudogene with similarity to ribosomal protein s20
+5.0	:	putative zinc finger protein pseudogene
+5.0	:	ribosomal protein l23a pseudogene
+5.0	:	ribosomal protein l23a pseudogene
+5.0	:	ribosomal protein l3 pseudogene
+5.0	:	ribosomal protein l31 pseudogene
+5.0	:	ribosomal protein rpl13a pseudogene
+5.0	:	ribosomal protein s26 pseudogene
+5.0	:	ribosomal protein s3 processed pseudogene
+5.0	:	ribosomal protein s9 pseudogene
+5.0	:	rna-binding protein hermes pseudogene
+5.0	:	splicing factor pseudogene
+5.0	:	taurine transporter processed pseudogene
+5.0	:	tubulin tyrosine ligase-like 1 pseudogene
+5.0	:	ubiquitin protein ligase, processed pseudogene
+5.0	:	unspliced orf
+5.0	:	uv excision repair protein pseudogene
+5.0	:	voltage-dependent anion channel isoform 2 pseudogene
+5.0	:	zinc finger-like processed pseudogene
