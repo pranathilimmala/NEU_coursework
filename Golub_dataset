@@ -1,0 +1,88 @@
+# Comprehensive R script for analyzing the Golub dataset
+
+# Ensure all required packages are installed and loaded
+packages <- c("multtest", "cluster", "ISLR", "splines", "boot", "graphics")
+new_packages <- packages[!(packages %in% installed.packages()[, "Package"])]
+if (length(new_packages)) install.packages(new_packages)
+lapply(packages, library, character.only = TRUE)
+
+# Load the Golub dataset
+data(golub)
+data(golub.cl)
+
+# Prepare the data
+ccnd3_expression <- golub[1042, , drop = FALSE]  # Extract CCND3 Cyclin D3 expression values
+rownames(ccnd3_expression) <- "CCND3 Cyclin D3"
+golub_groups <- factor(golub.cl, levels = 0:1, labels = c("ALL", "AML"))
+
+# Hierarchical clustering
+# Single linkage
+hc_single <- hclust(dist(ccnd3_expression, method = "euclidean"), method = "single")
+
+# Ward linkage
+hc_ward <- hclust(dist(ccnd3_expression, method = "euclidean"), method = "ward.D")
+
+# K-means clustering
+kmeans_result <- kmeans(ccnd3_expression, centers = 2)
+
+# Bootstrap estimation
+bootstrap_means <- boot(data = ccnd3_expression, statistic = function(data, indices) {
+  kmeans(data[indices, ], centers = 2)$centers
+}, R = 1000)
+
+# SSE for different numbers of clusters
+sse <- sapply(1:30, function(k) {
+  kmeans(ccnd3_expression, centers = k)$tot.withinss
+})
+
+# Problem 2 - Gene Sets Analysis
+set1 <- grep("oncogene", golub.gnames[,2])
+set2 <- grep("antigen", golub.gnames[,2])
+
+# Combine gene sets
+gene_data <- rbind(golub[set1,], golub[set2,])
+gene_labels <- factor(c(rep("oncogene", length(set1)), rep("antigen", length(set2))))
+
+# K-means clustering on combined gene sets
+km_genes <- kmeans(gene_data, centers = 2)
+
+# K-medoids clustering on combined gene sets
+dissimilarity <- daisy(gene_data)
+pam_genes <- pam(dissimilarity, k = 2)
+
+# Statistical tests
+chisq_km_genes <- chisq.test(table(km_genes$cluster, gene_labels))
+fisher_km_genes <- fisher.test(table(km_genes$cluster, gene_labels))
+chisq_pam_genes <- chisq.test(table(pam_genes$cluster, gene_labels))
+fisher_pam_genes <- fisher.test(table(pam_genes$cluster, gene_labels))
+
+# Problem 3 - NCI60 Data Analysis
+data(NCI60)
+nci_data <- NCI60$data
+nci_labs <- NCI60$labs
+
+# SSE for NCI60 data
+sse_nci <- sapply(1:30, function(k) {
+  kmeans(nci_data, centers = k, nstart = 25)$tot.withinss
+})
+
+# K-medoids clustering for NCI60 data
+dissimilarity_nci <- 1 - cor(t(nci_data))
+pam_nci <- pam(dissimilarity_nci, k = 7)
+
+# Plotting and saving results
+# (Including plots for hierarchical clustering dendrograms, k-means, and SSE)
+
+# Save cluster results and plots
+# save(kmeans_result, file = "kmeans_result.RData")
+# jpeg("sse_plot.jpg")
+# plot(sse, type = "b", main = "SSE vs Number of Clusters", xlab = "Number of clusters", ylab = "SSE")
+# dev.off()
+
+# To run the script, you can source it in an R environment:
+# source('path_to_script/golub_analysis.R')
+
+# Note: This script assumes that the golub dataset, along with its associated data, is available in your R environment.
+# If you are running this in a fresh session, make sure to load the dataset as shown at the beginning of this script.
+
+# You might want to include additional lines to output results to the console or to save other objects created during the analysis.
